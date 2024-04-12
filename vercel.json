@@ -6,6 +6,6 @@
   ],
   "routes": [
     { "src": "/(.*).(js|css|svg|png|jpg|jpeg|ico)", "dest": "/public/$1.$2" },
-    { "src": "/(.*)", "dest": "index.js" }
+    { "src": "/(.*)", "dest": "/app.js" }
   ]
 }
