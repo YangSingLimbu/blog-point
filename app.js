@@ -46,6 +46,12 @@ app.post("/compose", (req, res) => {
   res.redirect("/");
 });
 
+app.post("/delete", (req, res) => {
+  const title = req.body.title;
+  posts = posts.filter((post) => post.title !== title);
+  res.redirect("/");
+});
+
 app.get("/posts/:title", (req, res) => {
   var urlTitle = _.lowerCase(req.params.title);
 
