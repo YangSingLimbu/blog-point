@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+<h1>Contact Us</h1>
+
+<div style="background: #FBF6EE; padding: 12px;">
+    <form action="https://formsubmit.co/yangsing000@gmail.com" method="POST">
+        <h2>Send Message</h2>
+
+        <div class="input-box">
+            <label for="fname">Full Name :</label><br />
+            <input type="text" name="name" class="form-control" />
+        </div>
+
+        <div class="input-box">
+            <label for="fname">Email :</label><br />
+            <input type="email" name="email" placeholder="" />
+        </div>
+
+        <div class="input-box">
+            <label for="fname">Enter Message :</label><br />
+            <textarea placeholder="" class="form-control" name="message" rows="5" required></textarea>
+        </div>
+
+    <button type="submit" value="Send" class="btn btn-light" style="background: white; border: 1px solid black;margin-top: 10px">Send</button>
+    </form>
+</div>
+
+<%- include("partials/footer") %>

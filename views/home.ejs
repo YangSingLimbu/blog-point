@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+
+<h1 style="text-align: center; font-size: 36px; color: #333;">Create Blog Posts</h1>
+<div style="text-align: center;">
+    <a href="/compose">
+        <button class="btn btn-light" style="background: white; border: 1px solid black;">Compose post</button>
+    </a>
+</div>
+
+
+
+<% postsContent.forEach( x => { %>
+    <h2><%= x.title %></h2>
+    <p><%= x.content.substring(0, 100)%>
+    <% if (x.content.length > 100) { %>
+       <a href="/posts/<%= x.title %>">...Read more</a>
+    <% } %>
+    </p>
+<% }) %>
+
+<%- include("partials/footer") %>
